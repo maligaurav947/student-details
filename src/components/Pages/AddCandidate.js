@@ -9,6 +9,8 @@ const initialState = {
   name: "",
   email: "",
   contact: "",
+  rollno: "",
+  department: "",
 };
 export default function AddCandidate() {
   const [data, setData] = useState([]);
@@ -46,7 +48,7 @@ export default function AddCandidate() {
               type="text"
               id="name"
               value={name}
-              placeholder="Enter Your Name"
+              placeholder="Enter Your Full Name"
               onChange={handleInputChange}
             />
           </div>
@@ -58,7 +60,7 @@ export default function AddCandidate() {
               type="number"
               id="rollno"
               value={rollno}
-              placeholder="Enter Your Name"
+              placeholder="Enter Your Roll Number"
               onChange={handleInputChange}
             />
           </div>
@@ -69,7 +71,7 @@ export default function AddCandidate() {
               type="text"
               id="department"
               value={department}
-              placeholder="Enter Your Name"
+              placeholder="Enter Your Department"
               onChange={handleInputChange}
             />
           </div>
@@ -80,7 +82,7 @@ export default function AddCandidate() {
               type="email"
               id="email"
               value={email}
-              placeholder="Enter Your email"
+              placeholder="Enter Your Email"
               onChange={handleInputChange}
             />
           </div>
@@ -104,7 +106,7 @@ export default function AddCandidate() {
                 id="url"
                 value={img}
                 onChange={handleInputChange}
-                placeholder="HERE YOU CAN ADD ONLINE URL"
+                placeholder="Profile Url"
               />
             </div>
             {/* <input
