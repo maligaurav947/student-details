@@ -98,18 +98,18 @@ export default function AddCandidate() {
             />
           </div>
           <div className="ur">
-            <div>
+            {/* <div>
               <label htmlFor="Contact">Img Url -</label>
               <input
-                type="url"
+                type="file"
                 name="url"
                 id="url"
                 value={img}
                 onChange={handleInputChange}
                 placeholder="Profile Url"
               />
-            </div>
-            {/* <input
+            </div> */}
+            <input
               type="file"
               name="img"
               id="img"
@@ -119,7 +119,7 @@ export default function AddCandidate() {
               style={{
                 border: "none",
               }}
-            /> */}
+            />
           </div>
           <input type="submit" value="save" className="button-17" />
         </form>

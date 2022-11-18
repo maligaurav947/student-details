@@ -27,14 +27,33 @@ function Home() {
           return (
             <div key={id} className="item">
               <div className="img">
-                {" "}
-                <img src={data[id].url} />
+                {data[id].url ? (
+                  <img src={data[id].url} />
+                ) : (
+                  <img
+                    src="http://raysensenbach.com/wp-content/uploads/2013/04/default.jpg"
+                    style={{
+                      objectFit: "cover",
+                    }}
+                  />
+                )}
               </div>
-              <h1>Name - {data[id].name}</h1>
-              <p>Roll No - {data[id].rollno}</p>
-              <p>Email - {data[id].email}</p>
-              <p>Contact Number - {data[id].contact}</p>
-              <p>department - {data[id].department}</p>
+              <p className="capitalize">
+                <span className="bold">Name</span> - {data[id].name}
+              </p>
+              <p>
+                <span className="bold">Roll No</span> - {data[id].rollno}
+              </p>
+              <p>
+                <span className="bold">Email </span>- {data[id].email}
+              </p>
+              <p>
+                <span className="bold">Contact Number</span> -{" "}
+                {data[id].contact}
+              </p>
+              <p className="capitalize">
+                <span className="bold">Department</span> - {data[id].department}
+              </p>
             </div>
           );
         })}
