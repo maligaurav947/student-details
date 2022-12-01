@@ -8,6 +8,7 @@ import AddCandidate from "./components/Pages/AddCandidate";
 import Home from "./components/Home";
 import View from "./components/Pages/View";
 import About from "./components/Pages/About";
+import Login from "./components/Pages/Login";
 
 function App() {
   return (

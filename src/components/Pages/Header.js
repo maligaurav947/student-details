@@ -13,8 +13,10 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Collage Web</Nav.Link>
-            <Nav.Link href="#pricing">How</Nav.Link>
+            <Nav.Link href="https://sjrit.ac.in/" target="_blank">
+              Collage Web
+            </Nav.Link>
+            <Nav.Link href="#pricing">Addmission</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link>

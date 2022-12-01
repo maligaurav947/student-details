@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import fireDb from "../../Firebase";
+
+import Tooltip from "react-bootstrap/Tooltip";
 import { toast } from "react-toastify";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
+
 const initialState = {
   name: "",
   email: "",
@@ -16,19 +17,54 @@ export default function AddCandidate() {
   const [data, setData] = useState([]);
   const [state, setState] = useState(initialState);
   const history = useNavigate();
+  const { id } = useParams();
+  useEffect(() => {
+    fireDb.child("candidate").on("value", (snapshot) => {
+      if (snapshot.val() !== null) {
+        setData({ ...snapshot.val() });
+      } else {
+        setData({});
+      }
+    });
+    return () => {
+      setData({});
+    };
+  }, [id]);
+
+  useEffect(() => {
+    if (id) {
+      setState({ ...data[id] });
+    } else {
+      setState({ ...initialState });
+    }
+    return () => {
+      setState({ ...initialState });
+    };
+  }, [id, data]);
   const { name, email, contact, rollno, department, img } = state;
   function handleSubmit(e) {
     e.preventDefault();
     if (!name || !email || !contact || !rollno || !department) {
       toast.error("Please Provide Following Information");
     } else {
-      fireDb.child("candidate").push(state, (err) => {
-        if (err) {
-          toast.error(err);
-        } else {
-          toast.success("Candidate Added");
-        }
-      });
+      if (!id) {
+        fireDb.child("candidate").push(state, (err) => {
+          if (err) {
+            toast.error(err);
+          } else {
+            toast.success("Candidate Added");
+          }
+        });
+      } else {
+        fireDb.child(`candidate/${id}`).set(state, (err) => {
+          if (err) {
+            toast.error(err);
+          } else {
+            toast.success("Candidate Update");
+          }
+        });
+      }
+
       setTimeout(() => history("/"), 500);
     }
   }
@@ -47,7 +83,7 @@ export default function AddCandidate() {
               name="name"
               type="text"
               id="name"
-              value={name}
+              value={name || ""}
               placeholder="Enter Your Full Name"
               onChange={handleInputChange}
             />
@@ -59,7 +95,7 @@ export default function AddCandidate() {
               name="rollno"
               type="number"
               id="rollno"
-              value={rollno}
+              value={rollno || ""}
               placeholder="Enter Your Roll Number"
               onChange={handleInputChange}
             />
@@ -70,7 +106,7 @@ export default function AddCandidate() {
               name="department"
               type="text"
               id="department"
-              value={department}
+              value={department || ""}
               placeholder="Enter Your Department"
               onChange={handleInputChange}
             />
@@ -81,7 +117,7 @@ export default function AddCandidate() {
               name="email"
               type="email"
               id="email"
-              value={email}
+              value={email || ""}
               placeholder="Enter Your Email"
               onChange={handleInputChange}
             />
@@ -92,24 +128,25 @@ export default function AddCandidate() {
               name="contact"
               type="number"
               id="contact"
-              value={contact}
+              value={contact || ""}
               placeholder="Enter Your Contact"
               onChange={handleInputChange}
             />
           </div>
           <div className="ur">
-            {/* <div>
+            <div>
               <label htmlFor="Contact">Img Url -</label>
+
               <input
-                type="file"
+                type="url"
                 name="url"
                 id="url"
-                value={img}
+                value={img || ""}
                 onChange={handleInputChange}
                 placeholder="Profile Url"
               />
-            </div> */}
-            <input
+            </div>
+            {/* <input
               type="file"
               name="img"
               id="img"
@@ -119,9 +156,13 @@ export default function AddCandidate() {
               style={{
                 border: "none",
               }}
-            />
+            /> */}
           </div>
-          <input type="submit" value="save" className="button-17" />
+          <input
+            type="submit"
+            value={id ? "Update" : "Save"}
+            className="button-17"
+          />
         </form>
       </div>
     </>
