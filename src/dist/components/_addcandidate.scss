@@ -1,5 +1,4 @@
 .addCandidate__section{
- height: 90vh;
 display: grid;
 place-content: center;
 form{
@@ -27,7 +26,7 @@ align-self: flex-end !important;
 
 @media screen and (max-width:756px) {
  .addCandidate__section{
-  height: 90vh;
+  height: 100%;
   form{
    input{
     width: 100%;
