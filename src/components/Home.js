@@ -4,6 +4,16 @@ import fireDb from "../Firebase";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { toast } from "react-toastify";
+import {
+  MDBBtn,
+  MDBBtnGroup,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardSubTitle,
+  MDBCardTitle,
+  MDBContainer,
+} from "mdb-react-ui-kit";
 function Home() {
   const [data, setData] = useState({});
   const [query, setQuery] = useState({});
@@ -34,15 +44,15 @@ function Home() {
   return (
     <>
       <Header />
-      <div className="candidate">
+      <MDBContainer className="candidate d-flex flex-wrap">
         {Object.keys(data).map((id, index) => {
           return (
-            <div key={id} className="item">
+            <MDBCard key={id} className="item">
               <div className="img">
                 {data[id].url ? (
-                  <img src={data[id].url} />
+                  <MDBCardImage src={data[id].url} />
                 ) : (
-                  <img
+                  <MDBCardImage
                     src="http://raysensenbach.com/wp-content/uploads/2013/04/default.jpg"
                     style={{
                       objectFit: "cover",
@@ -50,41 +60,45 @@ function Home() {
                   />
                 )}
               </div>
-              <p className="text-capitalize">
+              <MDBCardTitle className="text-capitalize">
                 <span className="font-weight-bold">Name</span> - {data[id].name}
-              </p>
-              <p>
+              </MDBCardTitle>
+              <MDBCardSubTitle className="mb-2">
                 <span className="font-weight-bold">Roll No</span> -{" "}
                 {data[id].rollno}
-              </p>
-              <p>
+              </MDBCardSubTitle>
+              {/* <MDBCardSubTitle className="mb-2">
                 <span className="font-weight-bold">Email </span>-{" "}
                 {data[id].email}
-              </p>
-              <p>
+              </MDBCardSubTitle> */}
+              <MDBCardSubTitle className="mb-2">
                 <span className="font-weight-bold">Contact Number</span> -{" "}
                 {data[id].contact}
-              </p>
-              <p className="text-capitalize">
+              </MDBCardSubTitle>
+              <MDBCardSubTitle className="text-capitalize mb-3">
                 <span className="font-weight-bold">Department</span> -{" "}
                 {data[id].department}
-              </p>
-              <div className="d-flex align-items-center justify-content-between">
+              </MDBCardSubTitle>
+              <MDBBtnGroup className="d-flex align-items-center justify-content-between ">
                 <Link to={`update/${id}`}>
-                  <Button variant="outline-primary">Edit</Button>
+                  <Button variant="outline-primary" className="mr-2">
+                    Edit
+                  </Button>
                 </Link>
                 <Link to={`/view/${id}`}>
                   {" "}
-                  <Button variant="outline-success">View</Button>
+                  <Button variant="outline-success" className="mr-2">
+                    View
+                  </Button>
                 </Link>
                 <Button variant="outline-danger" onClick={() => onDelete(id)}>
                   Delete
                 </Button>
-              </div>
-            </div>
+              </MDBBtnGroup>
+            </MDBCard>
           );
         })}
-      </div>
+      </MDBContainer>
     </>
   );
 }

@@ -16,7 +16,9 @@ function Header() {
             <Nav.Link href="https://sjrit.ac.in/" target="_blank">
               Collage Web
             </Nav.Link>
-            <Nav.Link href="#pricing">Addmission</Nav.Link>
+            <Nav.Link>
+              <Link to="/addmission">Addmission</Link>
+            </Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link>
