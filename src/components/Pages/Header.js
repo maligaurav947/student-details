@@ -8,7 +8,14 @@ function Header() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
-          <Link to="/">Student Details</Link>
+          <Link to="/">
+            <img
+              src="https://sjrit.ac.in/assets/images/logo.png"
+              style={{
+                width: "150px",
+              }}
+            />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
