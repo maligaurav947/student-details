@@ -5,9 +5,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Addmission from "./components/Pages/Addmission";
 import AddCandidate from "./components/Pages/AddCandidate";
-import Home from "./components/Home";
+
 import View from "./components/Pages/View";
 import About from "./components/Pages/About";
+import Candidates from "./components/Pages/Candidates";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       <HashRouter>
         <ToastContainer postion="top-center" />
         <Routes>
-          <Route index element={<Home />} exact />
+          <Route index element={<Home />} />
+          <Route path="/candidates" element={<Candidates />} />
           <Route path="/add" element={<AddCandidate />} />
           <Route path="/update/:id" element={<AddCandidate />} />
           <Route path="/view/:id" element={<View />} />

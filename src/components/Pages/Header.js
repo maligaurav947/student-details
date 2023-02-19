@@ -29,8 +29,12 @@ function Header() {
           </Nav>
           <Nav>
             <Nav.Link>
+              <Link to="/candidates">Candidates</Link>
+            </Nav.Link>
+            <Nav.Link>
               <Link to="/add">Add Candidate</Link>
             </Nav.Link>
+
             <Nav.Link eventKey={2}>
               <Link to="/about"> About</Link>
             </Nav.Link>
