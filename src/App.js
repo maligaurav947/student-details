@@ -1,15 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, HashRouter } from "react-router-dom";
-import "./dist/css/main.css";
+import "./main.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Addmission from "./components/Pages/Addmission";
-import AddCandidate from "./components/Pages/AddCandidate";
+import AddCandidate from "./components/Candidate/AddCand/AddCandidate";
 
-import View from "./components/Pages/View";
-import About from "./components/Pages/About";
-import Candidates from "./components/Pages/Candidates";
-import Home from "./components/Home";
+import View from "./components/Candidate/View/View";
+import About from "./components/About/About";
+import Candidates from "./components/Candidate/Candidates";
+import Home from "./components/Home/Home";
 
 function App() {
   return (

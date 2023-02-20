@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 function Marquees() {
   return (
     <Marquee
-      className="h-100 w-100 p-2 "
+      className="p-2 "
       gradientWidth={0}
       speed={150}
       style={{

@@ -1,18 +1,18 @@
 import React from "react";
-import { MDBTable, MDBTableHead, MDBTableBody } from "mdb-react-ui-kit";
+
 
 export default function App() {
   return (
-    <MDBTable bordered style={{ maxWidth: "600px" }}>
-      <MDBTableHead>
+    <div bordered style={{ maxWidth: "600px" }}>
+      <div>
         <tr>
           <th scope="col">Sr.No</th>
           <th scope="col">Name of Course</th>
           <th scope="col">DTE Choice Code</th>
           <th scope="col">Intake</th>
         </tr>
-      </MDBTableHead>
-      <MDBTableBody>
+      </div>
+      <div>
         <tr>
           <th scope="row" className="table-active">
             1
@@ -41,7 +41,7 @@ export default function App() {
           <td>538161210</td>
           <td>60</td>
         </tr>
-      </MDBTableBody>
-    </MDBTable>
+      </div>
+    </div>
   );
 }
