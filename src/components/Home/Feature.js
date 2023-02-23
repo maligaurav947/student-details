@@ -18,8 +18,8 @@ function Feature() {
         >
           Our student details system offers the following features:
         </p>
-        <ul className="grid sm:md:flex gap-2 justify-center mt-5">
-          <li className="mb-4  w-full  card-boxshadow p-4 rounded-lg">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 justify-center mt-5">
+          <li className="mb-4 w-full card-boxshadow p-4 rounded-lg">
             <h3 className="text-3xl mb-2 font-medium">
               Manage student information
             </h3>

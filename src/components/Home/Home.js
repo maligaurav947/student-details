@@ -1,11 +1,14 @@
 import React from "react";
 import Marquees from "../asst/Marquees";
+import Contact from "../Contact/Contact";
 import Header from "../Header/Header";
 import Feature from "./Feature";
+import Testimonials from "./Testimonials";
 
 function Home() {
   return (
     <>
+      <Marquees />
       <Header />
 
       <div
@@ -29,6 +32,11 @@ function Home() {
         </p>
       </div>
       <Feature />
+      <div className="grid grid-cols-1 lg:xl:grid-cols-2">
+        <Testimonials message="I love how organized and user-friendly the Student Details System is. It's made managing my coursework so much simpler and less stressful!" />
+        <Testimonials message="The Student Details System has been a lifesaver for me. It's so easy to keep track of my assignments, grades, and course schedules. I would highly recommend it to any student!" />
+      </div>
+      <Contact />
     </>
   );
 }

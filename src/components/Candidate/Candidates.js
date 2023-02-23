@@ -36,142 +36,113 @@ function Candidates() {
   return (
     <>
       <Header />
-      <div
-        onClick={() => {
-          setGrid(!grid);
-        }}
-        className="mb-5 z-50"
-        style={{
-          position: "fixed",
-          right: "15px",
-          cursor: "pointer",
-          fontSize: "1.5rem",
-          backgroundColor: "transparent",
-          outline: "none",
-          border: "none",
-        }}
-      >
-        {grid ? (
-          <div className="">
-            <BsFillGrid1X2Fill />
-          </div>
-        ) : (
-          <div className="">
-            <AiOutlineBars />
-          </div>
-        )}
-      </div>
-      <div className="flex flex-wrap gap-5 items-center justify-center ">
-        {!grid ? (
-          <>
-            {Object.keys(data).map((id, index) => {
-              return (
-                <>
-                  <div
-                    class="card-boxshadow p-2 relative text-black"
-                    style={{
-                      width: "360px",
-                    }}
-                  >
-                    <div className="grid justify-center">
+      <div class="overflow-hidden rounded-lg  border border-gray-200 shadow-md m-5">
+        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
+          <thead class="bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                Name
+              </th>
+              <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                Roll Number
+              </th>
+              <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                Department
+              </th>
+              <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                Action
+              </th>
+            </tr>
+          </thead>
+          {Object.keys(data).map((id, index) => {
+            return (
+              <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+                <tr class="hover:bg-gray-50">
+                  <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
+                    <div class="relative h-10 w-10">
                       <img
-                        class="w-32 h-32 rounded-full mb-3"
+                        class="h-full w-full rounded-full object-cover object-center"
                         src={data[id].url}
-                        alt="Profile Image"
+                        alt=""
                       />
+                      <span class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
                     </div>
-                    <div class="flex flex-col gap-2">
-                      <h5 class="text-xl">
-                        <span className="font-bold">Name</span>:{data[id].name}
-                      </h5>
-                      <p class="text-xl">
-                        <span className="font-bold">Roll No</span>:
-                        {data[id].rollno}
-                      </p>
-                      <p class="text-xl">
-                        <span className="font-bold">Contact Number</span>:
-                        {data[id].contact}
-                      </p>
-                      <p class="text-xl">
-                        <span className="font-bold">Department</span>:
-                        {data[id].department}
-                      </p>
-
-                      <div class="mt-4 outline-none">
-                        <div className="flex justify-between gap-5">
-                          <button className="pt-2 pb-2 hover:bg-blue-400 pr-4 pl-4 rounded-md border-2 border-blue-500">
-                            Edit
-                          </button>
-                          <button className="pt-2 pb-2 pr-4 pl-4 rounded-md border-2 border-yellow-500 hover:bg-yellow-400">
-                            View
-                          </button>
-                          <button className="pt-2 pb-2 pr-4 pl-4 rounded-md border-2 border-red-500 hover:bg-red-400">
-                            Delete
-                          </button>
-                        </div>
+                    <div class="text-sm">
+                      <div class="font-medium text-gray-700">
+                        {data[id].name}
                       </div>
+                      <div class="text-gray-400">{data[id].email}</div>
                     </div>
-                  </div>
-                </>
-              );
-            })}
-          </>
-        ) : (
-          <div className="">
-            <div>
-              <div>
-                <tr>
-                  <th scope="col">Name</th>
-                  <th scope="col">Title</th>
-                  <th scope="col">Email Id</th>
-                  <th scope="col">Roll No</th>
-                  <th scope="col">Actions</th>
-                </tr>
-              </div>
-              <div>
-                {Object.keys(data).map((id, index) => {
-                  return (
-                    <tr>
-                      <td>
-                        <div className="d-flex align-items-center">
-                          <img
-                            src={data[id].url}
-                            alt=""
-                            style={{ width: "45px", height: "45px" }}
-                            className="rounded-circle"
-                          />
-                          <div className="ms-3">
-                            <p className="fw-bold mb-1">{data[id].name}</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p className="text-muted mb-0">
-                          {" "}
-                          {data[id].department}
-                        </p>
-                      </td>
-                      <td>
-                        <p className="text-muted mb-0">{data[id].email}</p>
-                      </td>
-                      <td>{data[id].rollno}</td>
-                      <td>
-                        <Link to={`update/${id}`}>
-                          <button>Edit</button>
-                        </Link>
-                        <Link to={`/view/${id}`}>
-                          <button>View</button>
-                        </Link>
+                  </th>
+                  <td class="px-6 py-4">{data[id].rollno}</td>
+                  <td class="px-6 py-4">{data[id].department}</td>
 
-                        <button onClick={() => onDelete(id)}>Delete</button>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        )}
+                  <td class="px-6 py-4">
+                    <div class="flex justify-end gap-4">
+                      <Link to={`/view/${id}`}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="h-6 w-6"
+                          x-tooltip="tooltip"
+                        >
+                          <circle cx="12" cy="12" r="3.5" stroke="#222222" />
+                          <path
+                            d="M20.188 10.9343C20.5762 11.4056 20.7703 11.6412 20.7703 12C20.7703 12.3588 20.5762 12.5944 20.188 13.0657C18.7679 14.7899 15.6357 18 12 18C8.36427 18 5.23206 14.7899 3.81197 13.0657C3.42381 12.5944 3.22973 12.3588 3.22973 12C3.22973 11.6412 3.42381 11.4056 3.81197 10.9343C5.23206 9.21014 8.36427 6 12 6C15.6357 6 18.7679 9.21014 20.188 10.9343Z"
+                            stroke="#222222"
+                          />
+                        </svg>
+                      </Link>
+                      <a
+                        x-data="{ tooltip: 'Delete' }"
+                        href="#"
+                        onClick={() => onDelete(id)}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="h-6 w-6"
+                          x-tooltip="tooltip"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                          />
+                        </svg>
+                      </a>
+                      <Link to={`update/${id}`}>
+                        <a x-data="{ tooltip: 'Edite' }" href="#">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                            x-tooltip="tooltip"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+                            />
+                          </svg>
+                        </a>
+                      </Link>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            );
+          })}
+        </table>
       </div>
     </>
   );

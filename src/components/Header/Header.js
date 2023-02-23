@@ -9,7 +9,7 @@ function Header() {
   return (
     <>
       <>
-        <nav className="relative flex flex-wrap items-center justify-between bg-black px-2 py-3">
+        <nav className="sticky top-0 z-50 w-full flex flex-wrap items-center justify-between bg-black px-2 py-3">
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
               <a
