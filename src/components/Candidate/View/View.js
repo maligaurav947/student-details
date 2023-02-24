@@ -24,7 +24,14 @@ function View() {
       <div className="">
         <div className="bg-slate-300 rounded-lg w-96 h-96 mb-2 p-1">
           <div className="flex items-center flex-col gap-2">
-            <img src={user.url} className="w-40 h-40 rounded-md" />
+            {user.url ? (
+              <img src={user.url} className="w-40 h-40 rounded-md" />
+            ) : (
+              <img
+                src="https://t3.ftcdn.net/jpg/00/64/67/52/240_F_64675209_7ve2XQANuzuHjMZXP3aIYIpsDKEbF5dD.jpg"
+                className="w-40 h-40 rounded-full"
+              />
+            )}
             <h2 className="text-2xl">Name: {user.name}</h2>
             <h2 className="text-xl">{user.department}</h2>
           </div>

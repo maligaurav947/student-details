@@ -4,7 +4,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Addmission from "./components/Pages/Addmission";
 import AddCandidate from "./components/Candidate/AddCand/AddCandidate";
-
 import View from "./components/Candidate/View/View";
 import About from "./components/About/About";
 import Candidates from "./components/Candidate/Candidates";

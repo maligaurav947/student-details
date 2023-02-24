@@ -90,7 +90,7 @@ export default function AddCandidate() {
         });
       }
 
-      setTimeout(() => history("/"), 500);
+      setTimeout(() => history("/candidates"), 500);
     }
   }
   const handleInputChange = (e) => {
@@ -100,154 +100,223 @@ export default function AddCandidate() {
   return (
     <>
       <Header />
-
-      <div className="addCandidate__section" style={{ minHeight: "90vh" }}>
-        <form onSubmit={handleSubmit}>
-          <div className="d-grid align-items-center justify-content-center ">
-            <div>
-              <label htmlFor="name">Name</label>
-              <input
-                name="name"
-                type="text"
-                id="name"
-                value={name || ""}
-                placeholder="Enter Your Full Name"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="name">Address -</label>
-              <input
-                name="address"
-                type="text"
-                id="address"
-                value={address || ""}
-                placeholder="Enter Your Full Address"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="name">Roll NO -</label>
-              <input
-                name="rollno"
-                type="number"
-                id="rollno"
-                value={rollno || ""}
-                placeholder="Enter Your Roll Number"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="name">Department -</label>
-              <input
-                name="department"
-                type="text"
-                id="department"
-                value={department || ""}
-                placeholder="Enter Your Department"
-                onChange={handleInputChange}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email">Email -</label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                value={email || ""}
-                placeholder="Enter Your Email"
-                onChange={handleInputChange}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="Contact">Contact -</label>
-              <input
-                name="contact"
-                type="number"
-                id="contact"
-                value={contact || ""}
-                placeholder="Enter Your Contact"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="Profile">Profile Img -</label>
-              <input
-                type="url"
-                name="url"
-                id="url"
-                value={img || ""}
-                onChange={handleInputChange}
-                placeholder="Profile Url"
-              />
-            </div>
-          </div>
-          <div className="mt-2">
-            <div className="d-flex flex-wrap align-items-center justify-content-center">
-              <div className="d-flex align-items-center">
-                <h6>
-                  Semester 5 <sup>th</sup>
-                </h6>
-                <input
-                  type="number"
-                  name="semfive"
-                  id="semfive"
-                  style={{ width: "50%" }}
-                  value={semfive || ""}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="d-flex align-items-center">
-                <h6>
-                  Semester 6 <sup>th</sup>
-                </h6>
-                <input
-                  type="number"
-                  name="semsix"
-                  id="semsix"
-                  style={{ width: "50%" }}
-                  value={semsix || ""}
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <div className="d-flex align-items-center">
-                <h6>
-                  Semester 7 <sup>th</sup>
-                </h6>
-                <input
-                  type="number"
-                  name="semseven"
-                  id="semseven"
-                  style={{ width: "50%" }}
-                  value={semseven || ""}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="d-flex align-items-center">
-                <h6>
-                  Semester 8 <sup>th</sup>
-                </h6>
-                <input
-                  type="number"
-                  name="semeight"
-                  id="semeight"
-                  style={{ width: "50%" }}
-                  value={semeight || ""}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-          </div>
+      <form
+        className="grid place-content-center"
+        style={{
+          height: "80vh",
+        }}
+        onSubmit={handleSubmit}
+      >
+        <div class="relative z-0 w-full mb-6 group">
           <input
-            type="submit"
-            value={id ? "Update" : "Save"}
-            className="button-17"
+            name="name"
+            type="text"
+            id="name"
+            value={name || ""}
+            onChange={handleInputChange}
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+            required
           />
-        </form>
-      </div>
+          <label
+            htmlFor="name"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Full Name
+          </label>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-6 group">
+            <input
+              name="rollno"
+              type="number"
+              id="rollno"
+              value={rollno || ""}
+              onChange={handleInputChange}
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              placeholder=" "
+              required
+            />
+            <label
+              htmlFor="name"
+              class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Roll No
+            </label>
+          </div>
+          <div class="relative z-0 w-full mb-6 group">
+            <input
+              name="department"
+              type="text"
+              id="department"
+              value={department || ""}
+              onChange={handleInputChange}
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              placeholder=" "
+              required
+            />
+            <label
+              htmlFor="name"
+              class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Department
+            </label>
+          </div>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input
+            name="email"
+            type="email"
+            id="email"
+            value={email || ""}
+            onChange={handleInputChange}
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+            required
+          />
+          <label
+            htmlFor="email"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Email
+          </label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input
+            name="contact"
+            type="number"
+            id="contact"
+            value={contact || ""}
+            onChange={handleInputChange}
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+            required
+          />
+          <label
+            htmlFor="Contact"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Phone number
+          </label>
+        </div>
+
+        <div class="relative z-0 w-full mb-6 group">
+          <input
+            name="address"
+            type="text"
+            id="address"
+            value={address || ""}
+            onChange={handleInputChange}
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+            required
+          />
+          <label
+            htmlFor="name"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Address
+          </label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input
+            type="url"
+            name="url"
+            id="url"
+            value={img || ""}
+            onChange={handleInputChange}
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+          />
+          <label
+            htmlFor="Profile"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 z-10"
+          >
+            Profile Url
+          </label>
+        </div>
+        <label>Attandance</label>
+        <div class="grid md:grid-cols-4 md:gap-6 mt-2">
+          <div class="relative z-0 w-full mb-6 group">
+            <input
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              placeholder=" "
+              type="number"
+              name="semfive"
+              id="semfive"
+              value={semfive || ""}
+              onChange={handleInputChange}
+              required
+            />
+            <label
+              htmlFor="name"
+              class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Semester V
+            </label>
+          </div>
+          <div class="relative z-0 w-full mb-6 group">
+            <input
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              placeholder=" "
+              type="number"
+              name="semsix"
+              id="semsix"
+              value={semsix || ""}
+              onChange={handleInputChange}
+              required
+            />
+            <label
+              htmlFor="name"
+              class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Semester VI
+            </label>
+          </div>
+          <div class="relative z-0 w-full mb-6 group">
+            <input
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              placeholder=" "
+              type="number"
+              name="semseven"
+              id="semseven"
+              value={semseven || ""}
+              onChange={handleInputChange}
+              required
+            />
+            <label
+              htmlFor="name"
+              class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Semester VII
+            </label>
+          </div>
+          <div class="relative z-0 w-full mb-6 group">
+            <input
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              placeholder=" "
+              type="number"
+              name="semeight"
+              id="semeight"
+              value={semeight || ""}
+              onChange={handleInputChange}
+              required
+            />
+            <label
+              htmlFor="name"
+              class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Semester VIII
+            </label>
+          </div>
+        </div>
+
+        <input
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer"
+          type="submit"
+          value={id ? "Update" : "Submit"}
+        />
+      </form>
     </>
   );
 }

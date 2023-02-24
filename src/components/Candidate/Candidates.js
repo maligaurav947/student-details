@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import fireDb from "../DB/Firebase";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { BsFillGrid1X2Fill } from "react-icons/bs";
 import { AiOutlineBars } from "react-icons/ai";
@@ -9,7 +9,7 @@ import { AiOutlineBars } from "react-icons/ai";
 function Candidates() {
   const [grid, setGrid] = React.useState(false);
   const [data, setData] = useState({});
-
+  const history = useNavigate();
   useEffect(() => {
     fireDb.child("candidate").on("value", (snapshot) => {
       if (snapshot.val() !== null) {
@@ -29,6 +29,7 @@ function Candidates() {
           toast.error(err);
         } else {
           toast.success("User Got Successfuly Deleted");
+          setTimeout(() => history("/candidates"), 10);
         }
       });
     }
@@ -36,10 +37,10 @@ function Candidates() {
   return (
     <>
       <Header />
-      <div class="overflow-hidden rounded-lg  border border-gray-200 shadow-md m-5">
-        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
+      <div class="rounded-lg  border border-gray-200 shadow-md m-5 grid place-content-center">
+        <table class="border-collapse bg-white text-left text-base text-gray-500">
           <thead class="bg-gray-50">
-            <tr>
+            <tr className="">
               <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                 Name
               </th>
@@ -56,18 +57,25 @@ function Candidates() {
           </thead>
           {Object.keys(data).map((id, index) => {
             return (
-              <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+              <tbody class="divide-y divide-gray-100 border-t border-gray-100 text-base">
                 <tr class="hover:bg-gray-50">
                   <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
                     <div class="relative h-10 w-10">
-                      <img
-                        class="h-full w-full rounded-full object-cover object-center"
-                        src={data[id].url}
-                        alt=""
-                      />
-                      <span class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
+                      {data[id].url ? (
+                        <img
+                          class="h-full w-full rounded-full object-cover object-center"
+                          src={data[id].url}
+                          alt=""
+                        />
+                      ) : (
+                        <img
+                          class="h-full w-full rounded-full object-cover object-center"
+                          alt=""
+                          src="https://t3.ftcdn.net/jpg/00/64/67/52/240_F_64675209_7ve2XQANuzuHjMZXP3aIYIpsDKEbF5dD.jpg"
+                        />
+                      )}
                     </div>
-                    <div class="text-sm">
+                    <div class="">
                       <div class="font-medium text-gray-700">
                         {data[id].name}
                       </div>
@@ -76,9 +84,8 @@ function Candidates() {
                   </th>
                   <td class="px-6 py-4">{data[id].rollno}</td>
                   <td class="px-6 py-4">{data[id].department}</td>
-
                   <td class="px-6 py-4">
-                    <div class="flex justify-end gap-4">
+                    <div class="flex gap-4">
                       <Link to={`/view/${id}`}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +124,7 @@ function Candidates() {
                           />
                         </svg>
                       </a>
-                      <Link to={`update/${id}`}>
+                      <Link to={`/update/${id}`}>
                         <a x-data="{ tooltip: 'Edite' }" href="#">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
