@@ -21,7 +21,10 @@ function Home() {
         }}
       >
         <img src={eye} className="absolute right-24 w-28 top-48" />
-        <img src={BrooklynRelaxing} className="left-24 w-72 top-96 absolute" />
+        <img
+          src={BrooklynRelaxing}
+          className="left-24 w-72 top-96 absolute hidden lg:xl:md:block"
+        />
         <h2 className="text-6xl font-medium mb-3">
           Welcome to the Student Details System
         </h2>
