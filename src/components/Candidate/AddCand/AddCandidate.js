@@ -51,7 +51,7 @@ export default function AddCandidate() {
     contact,
     rollno,
     department,
-    img,
+    url,
     semfive,
     semsix,
     semseven,
@@ -223,7 +223,7 @@ export default function AddCandidate() {
             type="url"
             name="url"
             id="url"
-            value={img || ""}
+            value={url || ""}
             onChange={handleInputChange}
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
