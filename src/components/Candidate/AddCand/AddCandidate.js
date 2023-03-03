@@ -101,10 +101,8 @@ export default function AddCandidate() {
     <>
       <Header />
       <form
-        className="grid place-content-center"
-        style={{
-          height: "80vh",
-        }}
+        className="block items-center justify-center md:lg:xl:2xl:grid p-1 mt-3 md:lg:xl:2xl:mt-5"
+        style={{}}
         onSubmit={handleSubmit}
       >
         <div class="relative z-0 w-full mb-6 group">
@@ -114,7 +112,7 @@ export default function AddCandidate() {
             id="name"
             value={name || ""}
             onChange={handleInputChange}
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer border-b-2 border-black"
             placeholder=" "
             required
           />
@@ -125,7 +123,7 @@ export default function AddCandidate() {
             Full Name
           </label>
         </div>
-        <div class="grid md:grid-cols-2 md:gap-6">
+        <div class="grid grid-cols-2 gap-3">
           <div class="relative z-0 w-full mb-6 group">
             <input
               name="rollno"
@@ -133,7 +131,7 @@ export default function AddCandidate() {
               id="rollno"
               value={rollno || ""}
               onChange={handleInputChange}
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer border-b-2 border-black"
               placeholder=" "
               required
             />
@@ -151,7 +149,7 @@ export default function AddCandidate() {
               id="department"
               value={department || ""}
               onChange={handleInputChange}
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer border-b-2 border-black"
               placeholder=" "
               required
             />
@@ -170,7 +168,7 @@ export default function AddCandidate() {
             id="email"
             value={email || ""}
             onChange={handleInputChange}
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer border-b-2 border-black"
             placeholder=" "
             required
           />
@@ -188,7 +186,7 @@ export default function AddCandidate() {
             id="contact"
             value={contact || ""}
             onChange={handleInputChange}
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer border-b-2 border-black"
             placeholder=" "
             required
           />
@@ -207,7 +205,7 @@ export default function AddCandidate() {
             id="address"
             value={address || ""}
             onChange={handleInputChange}
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer border-b-2 border-black"
             placeholder=" "
             required
           />
@@ -225,7 +223,7 @@ export default function AddCandidate() {
             id="url"
             value={url || ""}
             onChange={handleInputChange}
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 appearance-none border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  appearance-none border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer border-b-2 border-black"
             placeholder=" "
           />
           <label
@@ -236,10 +234,10 @@ export default function AddCandidate() {
           </label>
         </div>
         <label>Attandance</label>
-        <div class="grid md:grid-cols-4 md:gap-6 mt-2">
-          <div class="relative z-0 w-full mb-6 group">
+        <div class="grid md:grid-cols-4 md:gap-6 mt-2 grid-cols-2 gap-1">
+          <div class="relative z-0 w-full mb-6 group ">
             <input
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-b-2 border-black appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer "
               placeholder=" "
               type="number"
               name="semfive"
@@ -257,7 +255,7 @@ export default function AddCandidate() {
           </div>
           <div class="relative z-0 w-full mb-6 group">
             <input
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-b-2 border-black appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer "
               placeholder=" "
               type="number"
               name="semsix"
@@ -275,7 +273,7 @@ export default function AddCandidate() {
           </div>
           <div class="relative z-0 w-full mb-6 group">
             <input
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-b-2 border-black appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer "
               placeholder=" "
               type="number"
               name="semseven"
@@ -293,7 +291,7 @@ export default function AddCandidate() {
           </div>
           <div class="relative z-0 w-full mb-6 group">
             <input
-              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-b-2 border-black appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer "
               placeholder=" "
               type="number"
               name="semeight"
