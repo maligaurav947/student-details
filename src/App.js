@@ -8,6 +8,7 @@ import View from "./components/Candidate/View/View";
 import About from "./components/About/About";
 import Candidates from "./components/Candidate/Candidates";
 import Home from "./components/Home/Home";
+import Error from "./components/asst/Error";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/view/:id" element={<View />} />
           <Route path="/about" element={<About />} />
           <Route path="/addmission" element={<Addmission />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </HashRouter>
     </>
