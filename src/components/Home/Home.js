@@ -9,34 +9,27 @@ var BrooklynRelaxing = require("../asst/img/People of BrooklynRelaxing.png");
 function Home() {
   return (
     <>
-      <Marquees />
       <Header />
       <div
-        className="w-screen text-center grid place-content-center bg-no-repeat"
+        className="p-5 w-screen text-center grid place-content-center bg-no-repeat gap-5 home-container"
         style={{
           backgroundSize: "Cover",
-          height: "80vh",
-
+          backgroundColor: "#4B3F72",
           backgroundAttachment: "fixed",
         }}
       >
-        <img src={eye} className="absolute right-24 w-28 top-48" />
-        <img
-          src={BrooklynRelaxing}
-          className="left-24 w-72 top-96 absolute hidden lg:xl:md:block"
-        />
-        <h2 className="text-6xl font-medium mb-3">
+        <h2 className="text-3xl lg:xl:md:2xl:text-6xl font-medium mb-3">
           Welcome to the Student Details System
         </h2>
-        <p className="text-2xl font-normal">
+        <p className="text-lg lg:xl:md:2xl:text-2xl font-normal">
           This website allows you to manage student details, courses, and
           grades.
-        </p>
-        <p className="text-2xl font-normal">
+          <br />
           Please use the navigation menu above to get started.
         </p>
       </div>
       <Feature />
+      <h2 className="text-6xl pl-8 mb-4">Customer Love Service</h2>
       <div className="grid grid-cols-1 lg:xl:grid-cols-2">
         <Testimonials message="I love how organized and user-friendly the Student Details System is. It's made managing my coursework so much simpler and less stressful!" />
         <Testimonials message="The Student Details System has been a lifesaver for me. It's so easy to keep track of my assignments, grades, and course schedules. I would highly recommend it to any student!" />

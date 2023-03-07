@@ -1,8 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
+::selection {
+ background-color: #29223f !important;
+
+}
+
+p,
+label,
+input,
+div,
+button::selection {
+ color: white !important;
+}
 
 ::-webkit-scrollbar {
  width: 0;
+}
+
+h1,
+h3,
+h2,
+h4,
+h5,
+h6 {
+ color: #00C4ED !important;
+ font-family: 'Tilt Neon', cursive;
+}
+
+p {
+ color: #E8D5B5;
+ font-family: 'Lato', sans-serif !important;
+}
+
+.home-container {
+ height: 70vh;
+}
+
+@media (min-width: 1024px) {
+ @media (min-width: 1280px) {
+  @media (min-width: 768px) {
+   @media (min-width: 1536px) {
+
+    .home-container {
+     height: 90vh;
+    }
+   }
+  }
+ }
 }

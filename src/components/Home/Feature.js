@@ -11,15 +11,21 @@ function Feature() {
       >
         <h2 className="text-6xl mb-4">Features</h2>
         <p
-          className="text-3xl font-semibold"
+          className="text-3xl font-semibold text-black"
           style={{
             lineHeight: "1.5",
+            color: "black",
           }}
         >
           Our student details system offers the following features:
         </p>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 justify-center mt-5">
-          <li className="mb-4 w-full card-boxshadow p-4 rounded-lg">
+          <li
+            className="mb-4 w-full card-boxshadow p-4 rounded-lg"
+            style={{
+              backgroundColor: "#4B3F72",
+            }}
+          >
             <h3 className="text-3xl mb-2 font-medium">
               Manage student information
             </h3>
@@ -34,7 +40,12 @@ function Feature() {
               academic records.
             </p>
           </li>
-          <li className="mb-4 w-full  card-boxshadow p-4 rounded-lg">
+          <li
+            className="mb-4 w-full  card-boxshadow p-4 rounded-lg"
+            style={{
+              backgroundColor: "#4B3F72",
+            }}
+          >
             <h3 className="text-3xl mb-2 font-medium">
               Manage course information
             </h3>
@@ -48,7 +59,12 @@ function Feature() {
               name, code, credit hours, and course instructors.
             </p>
           </li>
-          <li className="mb-4  w-full  card-boxshadow p-4 rounded-lg">
+          <li
+            className="mb-4  w-full  card-boxshadow p-4 rounded-lg"
+            style={{
+              backgroundColor: "#4B3F72",
+            }}
+          >
             <h3 className="text-3xl mb-2 font-medium">Manage grades</h3>
             <p
               className="text-lg font-extralight"
@@ -61,7 +77,12 @@ function Feature() {
               attendance records.
             </p>
           </li>
-          <li className="mb-4 w-full  card-boxshadow p-4 rounded-lg">
+          <li
+            className="mb-4 w-full  card-boxshadow p-4 rounded-lg"
+            style={{
+              backgroundColor: "#4B3F72",
+            }}
+          >
             <h3 className="text-3xl mb-2 font-medium">Generate reports</h3>
             <p
               className="text-lg font-extralight"

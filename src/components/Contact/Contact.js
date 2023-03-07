@@ -7,7 +7,7 @@ function Contact() {
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center ">
           Contact Us
         </h2>
-        <p class="mb-8 lg:mb-16 font-light text-center sm:text-xl">
+        <p class="mb-8 lg:mb-16 font-light text-center sm:text-xl text-black">
           Got a technical issue? Want to send feedback about a beta feature?
           Need details about our Business plan? Let us know.
         </p>

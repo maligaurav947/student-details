@@ -9,11 +9,21 @@ function Header() {
   return (
     <>
       <>
-        <nav className="sticky top-0 z-50 w-full flex flex-wrap items-center justify-between bg-black px-2 py-3">
+        <nav
+          className="z-50 w-full flex flex-wrap items-center justify-between px-2 py-3"
+          style={{
+            backgroundColor: "#228292",
+          }}
+        >
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-            <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+            <div
+              className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+              style={{
+                color: "#181425",
+              }}
+            >
               <a
-                className="text-base font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase "
                 href="#"
               >
                 Student Details Form
@@ -32,10 +42,16 @@ function Header() {
                 (navbarOpen ? " flex" : " hidden")
               }
               id="example-navbar-danger"
+              x
             >
-              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-sm  ">
+              <ul
+                className="flex flex-col lg:flex-row list-none lg:ml-auto text-sm  "
+                style={{
+                  color: "#E8D5B5",
+                }}
+              >
                 <li className="nav-item">
-                  <a className="px-3 py-2 flex items-center uppercase font-bold leading-snug text-white hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center uppercase font-bold leading-snug hover:opacity-75">
                     <MdGroup />
                     <Link to="/candidates" className="ml-2">
                       candidates
@@ -43,7 +59,7 @@ function Header() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug text-white hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug hover:opacity-75">
                     <AiOutlineUserAdd />
                     <Link to="/add" className="ml-2">
                       Add Candidates
@@ -51,7 +67,7 @@ function Header() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug text-white hover:opacity-75">
+                  <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug  hover:opacity-75">
                     <FcAbout />
                     <Link to="/about" className="ml-2">
                       About Us
