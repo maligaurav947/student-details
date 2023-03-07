@@ -9,10 +9,10 @@
 
 }
 
-p,
-label,
-input,
-div,
+p::selection,
+label::selection,
+input::selection,
+div::selection,
 button::selection {
  color: white !important;
 }
