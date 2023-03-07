@@ -41,10 +41,11 @@ function Candidates() {
   return (
     <>
       <Header />
-      <div class="rounded-lg  border border-gray-200 shadow-md m-5 grid place-content-center">
+      <div class=" m-5 grid place-content-center">
         <div className="w-full grid place-content-center">
           <input
             className="border-b-2 border-black h-10 w-96 outline-none p-1"
+            np
             placeholder="Enter name for search"
             onChange={(e) => setQuery(e.target.value)}
           />

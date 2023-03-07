@@ -3,52 +3,54 @@ import { Link } from "react-router-dom";
 
 const Layout = ({ data, onDelete }) => {
   return (
-    <table class="border-collapse bg-white text-left text-base text-gray-500">
-      <thead class="bg-gray-50">
-        <tr className="">
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+    <table className="text-left text-base text-gray-500 flex flex-col justify-center">
+      <thead className="">
+        <tr className={`2xl:xl:grid grid-cols-4 hidden`}>
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">
             Name
           </th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">
             Roll Number
           </th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">
             Department
           </th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+          <th scope="col" className="px-6 py-4 font-medium text-gray-900">
             Action
           </th>
         </tr>
       </thead>
       {Object.keys(data).map((id, index) => {
         return (
-          <tbody class="divide-y divide-gray-100 border-t border-gray-100 text-base">
-            <tr class="hover:bg-gray-50">
-              <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
-                <div class="relative h-10 w-10">
+          <tbody className="text-base xl:2xl:block grid">
+            <tr className="block xl:2xl:grid grid-cols-4">
+              <th className=" flex gap-3 px-6 py-4 font-normal text-gray-900">
+                <div className="relative h-10 w-10">
                   {data[id].url ? (
                     <img
-                      class="h-full w-full rounded-full object-cover object-center"
+                      className="h-full w-full rounded-full object-cover object-center"
                       src={data[id].url}
                       alt=""
                     />
                   ) : (
                     <img
-                      class="h-full w-full rounded-full object-cover object-center"
+                      className="h-full w-full rounded-full object-cover object-center"
                       alt=""
                       src="https://t3.ftcdn.net/jpg/00/64/67/52/240_F_64675209_7ve2XQANuzuHjMZXP3aIYIpsDKEbF5dD.jpg"
                     />
                   )}
                 </div>
-                <div class="">
-                  <div class="font-medium text-gray-700">{data[id].name}</div>
-                  <div class="text-gray-400">{data[id].email}</div>
+                <div className="">
+                  <div className="font-medium text-gray-700">
+                    {data[id].name}
+                  </div>
+                  <div className="text-gray-400">{data[id].email}</div>
                 </div>
               </th>
-              <td class="px-6 py-4">{data[id].rollno}</td>
-              <td class="px-6 py-4">{data[id].department}</td>
-              <td class="px-6 py-4">
-                <div class="flex gap-4">
+              <td className="px-6 py-4">{data[id].rollno}</td>
+              <td className="px-6 py-4">{data[id].department}</td>
+              <td className="px-6 py-4">
+                <div className="flex gap-4">
                   <Link to={`/view/${id}`}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +58,7 @@ const Layout = ({ data, onDelete }) => {
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="h-6 w-6"
+                      className="h-6 w-6"
                       x-tooltip="tooltip"
                     >
                       <circle cx="12" cy="12" r="3.5" stroke="#222222" />
@@ -77,7 +79,7 @@ const Layout = ({ data, onDelete }) => {
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="h-6 w-6"
+                      className="h-6 w-6"
                       x-tooltip="tooltip"
                     >
                       <path
@@ -95,7 +97,7 @@ const Layout = ({ data, onDelete }) => {
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
                         stroke="currentColor"
-                        class="h-6 w-6"
+                        className="h-6 w-6"
                         x-tooltip="tooltip"
                       >
                         <path
