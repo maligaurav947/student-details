@@ -4,6 +4,7 @@ function Feature() {
   return (
     <>
       <main
+        className="bg-white"
         style={{
           margin: "0 auto",
           padding: "2em",

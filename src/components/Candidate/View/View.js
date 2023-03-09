@@ -39,7 +39,7 @@ function View() {
               </div>
               <div className="">
                 <h2 className="text-2xl">{user.name}</h2>
-                <p className="text-lg">{user.department}</p>
+                <p className="text-lg text-black">{user.department}</p>
               </div>
               <div className="mt-2">
                 <Link to={`/update/${id}`}>
@@ -65,7 +65,10 @@ function View() {
               <div className="text-lg bg-blue-200 p-1">
                 Phone Number:-{user.contact}
               </div>
-              <div className="text-lg p-1">Department:-{user.department}</div>
+              <div className="text-lg p-1 ">
+                Department:-
+                <span className="text-black">{user.department}</span>
+              </div>
               <div className="text-lg bg-blue-200 p-1">
                 Collage:-Shri Jaykumar Rawal Institute of Technology, Dondaicha
               </div>
@@ -85,58 +88,58 @@ function View() {
             repute within the country.
           </div>
         </div>
-        <div className="grid grid-cols-1 md:lg:xl:grid-cols-2 gap-5 place-content-center">
+        <div className="grid  grid-cols-1 md:lg:xl:grid-cols-2 gap-5 place-content-center text-black">
           <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
-            <h2>Semester V</h2>
+            <h2 className="text-black">Semester V</h2>
             <div>
-              <h4>Attandance</h4>
-              <h2>{user.semfive}/100</h2>
+              <h4 className="text-black">Attandance</h4>
+              <h2 className="text-black">{user.semfive}/100</h2>
             </div>
             <div>
-              <h4>Percentage</h4>
-              <h2>85/100</h2>
+              <h4 className="text-black">Percentage</h4>
+              <h2 className="text-black">85/100</h2>
             </div>
             <a href="" className="text-blue-600">
               Download The Result
             </a>
           </div>
           <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
-            <h2>Semester VI</h2>
+            <h2 className="text-black">Semester VI</h2>
             <div>
-              <h4>Attandance</h4>
-              <h2>{user.semsix}/100</h2>
+              <h4 className="text-black">Attandance</h4>
+              <h2 className="text-black">{user.semsix}/100</h2>
             </div>
             <div>
-              <h4>Percentage</h4>
-              <h2>85/100</h2>
-            </div>
-            <a href="" className="text-blue-600">
-              Download The Result
-            </a>
-          </div>
-          <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
-            <h2>Semester VII</h2>
-            <div>
-              <h4>Attandance</h4>
-              <h2>{user.semseven}/100</h2>
-            </div>
-            <div>
-              <h4>Percentage</h4>
-              <h2>85/100</h2>
+              <h4 className="text-black">Percentage</h4>
+              <h2 className="text-black">85/100</h2>
             </div>
             <a href="" className="text-blue-600">
               Download The Result
             </a>
           </div>
           <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
-            <h2>Semester VIII</h2>
+            <h2 className="text-black">Semester VII</h2>
             <div>
-              <h4>Attandance</h4>
-              <h2>{user.semeight}/100</h2>
+              <h4 className="text-black">Attandance</h4>
+              <h2 className="text-black">{user.semseven}/100</h2>
             </div>
             <div>
-              <h4>Percentage</h4>
-              <h2>85/100</h2>
+              <h4 className="text-black">Percentage</h4>
+              <h2 className="text-black">85/100</h2>
+            </div>
+            <a href="" className="text-blue-600">
+              Download The Result
+            </a>
+          </div>
+          <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
+            <h2 className="text-black">Semester VIII</h2>
+            <div>
+              <h4 className="text-black">Attandance</h4>
+              <h2 className="text-black">{user.semeight}/100</h2>
+            </div>
+            <div>
+              <h4 className="text-black">Percentage</h4>
+              <h2 className="text-black">85/100</h2>
             </div>
             <a href="" className="text-blue-600">
               Download The Result

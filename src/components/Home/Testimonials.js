@@ -3,7 +3,6 @@ import React from "react";
 function Testimonials(props) {
   return (
     <section
-      class=" dark:bg-gray-900"
       style={{
         backgroundColor: "#4B3F72",
       }}

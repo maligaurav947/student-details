@@ -27,7 +27,7 @@ h2,
 h4,
 h5,
 h6 {
- color: #00C4ED !important;
+ color: #00C4ED;
  font-family: 'Tilt Neon', cursive;
 }
 
@@ -62,4 +62,24 @@ p {
 
 .text-shadow {
  text-shadow: -8px 0 0 rgb(102 123 242);
+}
+.custom-shape-divider-bottom-1678333564 {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ overflow: hidden;
+ line-height: 0;
+ transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678333564 svg {
+ position: relative;
+
+ width: calc(100% + 1.3px);
+ height: 72px;
+}
+
+.custom-shape-divider-bottom-1678333564 .shape-fill {
+ fill: #FFFFFF;
 }

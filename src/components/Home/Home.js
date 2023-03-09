@@ -28,9 +28,22 @@ function Home() {
           Please use the navigation menu above to get started.
         </p>
       </div>
+      <div class="custom-shape-divider-bottom-1678333564 lg:xl:2xl:block hidden">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M649.97 0L550.03 0 599.91 54.12 649.97 0z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
       <Feature />
-      <h2 className="text-6xl pl-8 mb-4">Customer Love Service</h2>
-      <div className="grid grid-cols-1 lg:xl:grid-cols-2">
+      <h2 className="text-6xl pl-8">Customer Love Service</h2>
+      <div className="grid grid-cols-1 mt-4 lg:xl:grid-cols-2">
         <Testimonials message="I love how organized and user-friendly the Student Details System is. It's made managing my coursework so much simpler and less stressful!" />
         <Testimonials message="The Student Details System has been a lifesaver for me. It's so easy to keep track of my assignments, grades, and course schedules. I would highly recommend it to any student!" />
       </div>
