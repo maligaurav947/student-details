@@ -6,7 +6,7 @@ const Layout = ({ data, onDelete }) => {
     <div className="grid justify-center w-screen">
       <table className="text-left text-base text-gray-500 flex flex-col justify-center">
         <thead className="">
-          <tr className="hidden 2xl:xl:lg:grid grid-cols-4 ">
+          <tr className="hidden 2xl:xl:lg:grid grid-cols-4">
             <th
               scope="col"
               className="px-6 py-4 font-medium text-gray-900 w-fit"

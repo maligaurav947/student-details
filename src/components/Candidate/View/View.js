@@ -4,6 +4,7 @@ import fireDb from "../../DB/Firebase";
 import { Link, useHistory, useParams } from "react-router-dom";
 
 import Header from "./../../Header/Header";
+import GraphData from "./../GraphData";
 function View() {
   const [user, setUser] = useState({});
   const { id } = useParams();
@@ -97,7 +98,7 @@ function View() {
             </div>
             <div>
               <h4 className="text-black">Percentage</h4>
-              <h2 className="text-black">85/100</h2>
+              <h2 className="text-black">{user.semfivemark}/100</h2>
             </div>
             <a href="" className="text-blue-600">
               Download The Result
@@ -111,7 +112,7 @@ function View() {
             </div>
             <div>
               <h4 className="text-black">Percentage</h4>
-              <h2 className="text-black">85/100</h2>
+              <h2 className="text-black">{user.semsixmark}/100</h2>
             </div>
             <a href="" className="text-blue-600">
               Download The Result
@@ -125,7 +126,7 @@ function View() {
             </div>
             <div>
               <h4 className="text-black">Percentage</h4>
-              <h2 className="text-black">85/100</h2>
+              <h2 className="text-black">{user.semsevenmark}/100</h2>
             </div>
             <a href="" className="text-blue-600">
               Download The Result
@@ -139,7 +140,7 @@ function View() {
             </div>
             <div>
               <h4 className="text-black">Percentage</h4>
-              <h2 className="text-black">85/100</h2>
+              <h2 className="text-black">{user.semeightmark}/100</h2>
             </div>
             <a href="" className="text-blue-600">
               Download The Result
