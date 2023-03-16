@@ -7,20 +7,20 @@ import Layout from "./Layout";
 
 function Candidates() {
   const [grid, setGrid] = React.useState(false);
-  const [query, setQuery] = useState("");
-  const [data, setData] = useState({});
+  const [search, setSearch] = useState("");
+  const [user, setUser] = useState("");
 
   const history = useNavigate();
   useEffect(() => {
     fireDb.child("candidate").on("value", (snapshot) => {
       if (snapshot.val() !== null) {
-        setData({ ...snapshot.val() });
+        setUser({ ...snapshot.val() });
       } else {
-        setData({});
+        setUser({});
       }
     });
     return () => {
-      setData({});
+      setUser({});
     };
   }, []);
   const onDelete = (id) => {
@@ -35,22 +35,18 @@ function Candidates() {
       });
     }
   };
-  const search = (data) => {
-    return data.filter((data) => data.name.toLowerCase().include(query));
-  };
+  console.log(search);
   return (
     <>
       <Header />
-
       <div className="grid place-content-center">
         <input
           className="border-b-2 border-black h-10 w-96 outline-none p-1 mb-4 mt-5 "
-          np
           placeholder="Enter name for search"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <Layout data={data} onDelete={onDelete} />
+      <Layout user={user} onDelete={onDelete} search={search} />
     </>
   );
 }
