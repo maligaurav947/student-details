@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/student-details/static/css/main.a412026c.css",
-    "main.js": "/student-details/static/js/main.60a728bd.js",
+    "main.css": "/student-details/static/css/main.38dfe418.css",
+    "main.js": "/student-details/static/js/main.6bd55bf4.js",
     "static/media/People of BrooklynRelaxing.png": "/student-details/static/media/People of BrooklynRelaxing.00d6419ee40ee49e74b7.png",
     "static/media/MonstersEye.png": "/student-details/static/media/MonstersEye.b6fa640b405546cd72f8.png",
     "index.html": "/student-details/index.html",
-    "main.a412026c.css.map": "/student-details/static/css/main.a412026c.css.map",
-    "main.60a728bd.js.map": "/student-details/static/js/main.60a728bd.js.map"
+    "main.38dfe418.css.map": "/student-details/static/css/main.38dfe418.css.map",
+    "main.6bd55bf4.js.map": "/student-details/static/js/main.6bd55bf4.js.map"
   },
   "entrypoints": [
-    "static/css/main.a412026c.css",
-    "static/js/main.60a728bd.js"
+    "static/css/main.38dfe418.css",
+    "static/js/main.6bd55bf4.js"
   ]
 }
