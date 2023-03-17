@@ -14,8 +14,11 @@ function About() {
         }}
       >
         <div className="me-5 items">
-          <img src="https://reactjsexample.com/content/images/2022/10/Code-2022-29-41-07.jpg" />
-          <h2 className="text-center mb-2 mt-1">Mali Rolan Kailas</h2>
+          <img
+            src="https://reactjsexample.com/content/images/2022/10/Code-2022-29-41-07.jpg"
+            alt="Mali Rohan Profile"
+          />
+          <h2 className="text-center mb-2 mt-1">Mali Rohan Kailas</h2>
           <p className="text-center">Content Writer / Ui Design</p>
           <p>
             In publishing and graphic design, Lorem ipsum is a placeholder text
@@ -24,7 +27,10 @@ function About() {
           </p>
         </div>
         <div>
-          <img src="https://reactjsexample.com/content/images/2022/10/Code-2022-29-41-07.jpg" />
+          <img
+            src="https://reactjsexample.com/content/images/2022/10/Code-2022-29-41-07.jpg"
+            alt="Mali Gauarav Profile"
+          />
           <h2>Mali Gaurav Bhausaheb</h2>
           <p>FRONT END DEVELOPER</p>
           <p>
@@ -38,7 +44,10 @@ function About() {
           </div>
         </div>
         <div>
-          <img src="https://reactjsexample.com/content/images/2022/10/Code-2022-29-41-07.jpg" />
+          <img
+            src="https://reactjsexample.com/content/images/2022/10/Code-2022-29-41-07.jpg"
+            alt="Patil Amol Profile"
+          />
           <h2 className="text-center mb-2 mt-1">Patil Amol Rajendra</h2>
           <p className="text-center">Researcher / Data Handler</p>
           <p>

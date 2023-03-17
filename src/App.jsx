@@ -1,7 +1,7 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
 import "./main.css";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import Addmission from "./components/Pages/Addmission";
 import AddCandidate from "./components/Candidate/AddCand/AddCandidate";
 import View from "./components/Candidate/View/View";

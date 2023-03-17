@@ -1,13 +1,21 @@
 import firebase from "firebase";
 import "firebase/database";
+const apiKey = `${process.env.REACT_APP_API_KEY}`;
+const authDomain = `${process.env.REACT_APP_AUTHDOMAIN}`;
+const databaseURL = `${process.env.REACT_APP_DATABASEURL}`;
+const projectId = `${process.env.REACT_APP_PROJECTID}`;
+const storageBucket = `${process.env.REACT_APP_STORAGEBUCKET}`;
+const messagingSenderId = `${process.env.REACT_APP_MESSAGINGSENDERID}`;
+const appId = `${process.env.REACT_APP_APPID}`;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCuRr45PaGlbs8U-X4WwuZJeaCRlxHmuzo",
-  authDomain: "student-details-8ac93.firebaseapp.com",
-  databaseURL: "https://student-details-8ac93-default-rtdb.firebaseio.com",
-  projectId: "student-details-8ac93",
-  storageBucket: "student-details-8ac93.appspot.com",
-  messagingSenderId: "464172168270",
-  appId: "1:464172168270:web:c5fe33bc6432ce2c5abf1f",
+  apiKey: apiKey,
+  authDomain: authDomain,
+  databaseURL: databaseURL,
+  projectId: projectId,
+  storageBucket: storageBucket,
+  messagingSenderId: messagingSenderId,
+  appId: appId,
 };
 const fireDb = firebase.initializeApp(firebaseConfig);
 export default fireDb.database().ref();
