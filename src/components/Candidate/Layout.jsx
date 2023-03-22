@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const Layout = ({ user, onDelete, search }) => {
+const Layout = ({ user, onDelete }) => {
   return (
     <div className="grid justify-center w-screen">
       <table className="text-left text-base text-gray-500 flex flex-col justify-center">
@@ -26,12 +26,12 @@ const Layout = ({ user, onDelete, search }) => {
           </tr>
         </thead>
         {Object.keys(user)
-          .filter((user) => {
-            if (search == "") {
-              return user;
-            } else if (user.name.toLowerCase().includes(search.toLowerCase()))
-              return user;
-          })
+          // .filter((user) => {
+          //   if (search == "") {
+          //     return user;
+          //   } else if (user.name.toLowerCase().includes(search.toLowerCase()))
+          //     return user;
+          // })
           .map((id, index) => {
             return (
               <tbody className="text-base xl:2xl:block grid" key={index}>

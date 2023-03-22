@@ -6,8 +6,7 @@ import { toast } from "react-toastify";
 import Layout from "./Layout";
 
 function Candidates() {
-  const [grid, setGrid] = React.useState(false);
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
   const [user, setUser] = useState("");
 
   const history = useNavigate();
@@ -35,18 +34,18 @@ function Candidates() {
       });
     }
   };
-  console.log(search);
+
   return (
     <>
       <Header />
-      <div className="grid place-content-center">
+      {/* <div className="grid place-content-center">
         <input
           className="border-b-2 border-black h-10 w-96 outline-none p-1 mb-4 mt-5 "
           placeholder="Enter name for search"
           onChange={(e) => setSearch(e.target.value)}
         />
-      </div>
-      <Layout user={user} onDelete={onDelete} search={search} />
+      </div> */}
+      <Layout user={user} onDelete={onDelete} />
     </>
   );
 }
