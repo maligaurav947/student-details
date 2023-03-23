@@ -1,11 +1,10 @@
 import React from "react";
-import Marquees from "../asst/Marquees";
+
 import Contact from "../Contact/Contact";
 import Header from "../Header/Header";
 import Feature from "./Feature";
 import Testimonials from "./Testimonials";
-var eye = require("../asst/img/MonstersEye.png");
-var BrooklynRelaxing = require("../asst/img/People of BrooklynRelaxing.png");
+
 function Home() {
   return (
     <>
@@ -44,8 +43,14 @@ function Home() {
       <Feature />
       <h2 className="text-6xl pl-8">Customer Love Service</h2>
       <div className="grid grid-cols-1 mt-4 lg:xl:grid-cols-2">
-        <Testimonials message="I love how organized and user-friendly the Student Details System is. It's made managing my coursework so much simpler and less stressful!" />
-        <Testimonials message="The Student Details System has been a lifesaver for me. It's so easy to keep track of my assignments, grades, and course schedules. I would highly recommend it to any student!" />
+        <Testimonials
+          message="I love how organized and user-friendly the Student Details System is. It's made managing my coursework so much simpler and less stressful!"
+          autor="Mali Gaurav"
+        />
+        <Testimonials
+          message="The Student Details System has been a lifesaver for me. It's so easy to keep track of my assignments, grades, and course schedules. I would highly recommend it to any student!"
+          autor="Mali Rohan"
+        />
       </div>
       <Contact />
     </>

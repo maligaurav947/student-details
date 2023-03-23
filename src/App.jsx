@@ -9,6 +9,9 @@ import About from "./components/About/About";
 import Candidates from "./components/Candidate/Candidates";
 import Home from "./components/Home/Home";
 import Error from "./components/asst/Error";
+import Syllabus from "./components/Syllabus/Syllabus";
+import Civil from "./components/Syllabus/Civil/Civil";
+import First from "./components/Syllabus/Civil/First";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/candidates" element={<Candidates />} />
           <Route path="/add" element={<AddCandidate />} />
+          <Route path="/syllabus" element={<Syllabus />} />
+          <Route path="/civil" element={<Civil />} />
+          <Route path="/civil/first" element={<First />} />
           <Route path="/update/:id" element={<AddCandidate />} />
           <Route path="/view/:id" element={<View />} />
           <Route path="/about" element={<About />} />

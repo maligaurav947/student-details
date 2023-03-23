@@ -3,6 +3,7 @@ import { React, useState } from "react";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { MdGroup } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
+import { ImBooks } from "react-icons/im";
 import { GoThreeBars } from "react-icons/go";
 function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -23,7 +24,7 @@ function Header() {
               }}
             >
               <a
-                className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase "
+                className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                 href="#"
               >
                 Student Details Form
@@ -63,6 +64,14 @@ function Header() {
                     <AiOutlineUserAdd />
                     <Link to="/add" className="ml-2">
                       Add Candidates
+                    </Link>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug hover:opacity-75">
+                    <ImBooks />
+                    <Link to="/syllabus" className="ml-2">
+                      Syllabus
                     </Link>
                   </a>
                 </li>

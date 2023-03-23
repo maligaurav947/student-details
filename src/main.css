@@ -21,6 +21,11 @@ button::selection {
  width: 0;
 }
 
+a,
+Link {
+ color: currentColor !important;
+ text-decoration: none !important;
+}
 h1,
 h3,
 h2,

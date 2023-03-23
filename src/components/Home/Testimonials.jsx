@@ -24,14 +24,9 @@ function Testimonials(props) {
             <p class="text-2xl font-medium">{props.message}</p>
           </blockquote>
           <figcaption class="flex items-center justify-center mt-6 space-x-3">
-            <img
-              class="w-6 h-6 rounded-full"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-              alt="profile picture"
-            />
             <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-              <div class="pr-3 font-medium ">Micheal Gough</div>
-              <div class="pl-3 text-sm font-light">CEO at Google</div>
+              <div class="pr-3 font-medium text-white">{props.autor}</div>
+              <div class="pl-3 text-sm text-white">Computer Department</div>
             </div>
           </figcaption>
         </figure>
