@@ -1,17 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Syllabus from "../Syllabus";
-import YearLayout from "../YearLayout";
 
-function Civil() {
+import Syllabus from "../Syllabus";
+
+import YearLayout from "./../YearLayout";
+
+function Computer() {
   return (
     <>
       <Syllabus />
       <div className="grid mt-10">
-        <YearLayout name="civil" />
+        <YearLayout name="computer" />
       </div>
     </>
   );
 }
 
-export default Civil;
+export default Computer;

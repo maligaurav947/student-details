@@ -8,7 +8,7 @@ function Syllabus() {
       <Header />
       <div className="grid place-content-center mt-10">
         <div className="flex gap-5 justify-center text-white">
-          <Link to="">
+          <Link to="/computer">
             <div
               className="p-3 rounded-md"
               style={{
@@ -18,7 +18,7 @@ function Syllabus() {
               Computer and Inforamtion Technology
             </div>
           </Link>
-          <Link to="">
+          <Link to="/electronics">
             <div
               style={{
                 backgroundColor: "#4b3f72",
@@ -28,7 +28,7 @@ function Syllabus() {
               Electronics and Telecommunication Engineering
             </div>{" "}
           </Link>
-          <Link to="">
+          <Link to="/mechanical">
             <div
               className=" p-3 rounded-md"
               style={{
