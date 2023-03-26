@@ -4,13 +4,13 @@ function Feature() {
   return (
     <>
       <main
-        className="bg-white"
+        className="pt-8 pl-8 pr-8 pb-10"
         style={{
           margin: "0 auto",
-          padding: "2em",
+          backgroundColor: "#00C4ED",
         }}
       >
-        <h2 className="text-6xl mb-4">Features</h2>
+        <h2 className="text-6xl mb-4 text-white">Features</h2>
         <p
           className="text-3xl font-semibold text-black"
           style={{
@@ -22,7 +22,7 @@ function Feature() {
         </p>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 justify-center mt-5">
           <li
-            className="mb-4 w-full card-boxshadow p-4 rounded-lg"
+            className="w-full card-boxshadow p-4 rounded-lg"
             style={{
               backgroundColor: "#4B3F72",
             }}
@@ -42,7 +42,7 @@ function Feature() {
             </p>
           </li>
           <li
-            className="mb-4 w-full  card-boxshadow p-4 rounded-lg"
+            className=" w-full  card-boxshadow p-4 rounded-lg"
             style={{
               backgroundColor: "#4B3F72",
             }}
@@ -61,7 +61,7 @@ function Feature() {
             </p>
           </li>
           <li
-            className="mb-4  w-full  card-boxshadow p-4 rounded-lg"
+            className=" w-full  card-boxshadow p-4 rounded-lg"
             style={{
               backgroundColor: "#4B3F72",
             }}
@@ -79,7 +79,7 @@ function Feature() {
             </p>
           </li>
           <li
-            className="mb-4 w-full  card-boxshadow p-4 rounded-lg"
+            className="w-full  card-boxshadow p-4 rounded-lg"
             style={{
               backgroundColor: "#4B3F72",
             }}

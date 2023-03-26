@@ -13,7 +13,7 @@ function Header() {
         <nav
           className="z-50 w-full flex flex-wrap items-center justify-between px-2 py-3"
           style={{
-            backgroundColor: "#228292",
+            backgroundColor: "#160C28",
           }}
         >
           <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
@@ -24,7 +24,7 @@ function Header() {
               }}
             >
               <a
-                className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+                className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                 href="#"
               >
                 Student Details Form

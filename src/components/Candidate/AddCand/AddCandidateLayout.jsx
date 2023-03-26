@@ -150,7 +150,7 @@ function AddCandidateLayout({
           Profile Url
         </label>
       </div>
-      <label className="text-white">Attandance</label>
+      <label className="text-black font-bold">Attandance</label>
       <div class="grid md:grid-cols-4 md:gap-6 mt-2 grid-cols-2 gap-1">
         <div class="relative z-0 w-full mb-6 group ">
           <input
@@ -225,7 +225,7 @@ function AddCandidateLayout({
           </label>
         </div>
       </div>
-      <label className="text-white">Percentage % </label>
+      <label className="text-black font-bold">Percentage % </label>
       <div class="grid md:grid-cols-4 md:gap-6 mt-2 grid-cols-2 gap-1">
         <div class="relative z-0 w-full mb-6 group ">
           <input

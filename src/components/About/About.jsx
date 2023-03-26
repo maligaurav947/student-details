@@ -1,49 +1,46 @@
 import React from "react";
 
 import Header from "../Header/Header";
-
+import people from "./AboutData";
 function About() {
   return (
     <>
       <Header />
-      <div
-        className="flex flex-col gap-5 items-center justify-center w-screen  h-screen"
-        style={{
-          backgroundColor: "#4B3F72",
-        }}
-      >
-        <div className="flex items-center justify-center">
-          <div>
-            <h2 className="mb-2 mt-1">Mali Rohan Kailas</h2>
-            <p className="">Content Writer / Ui Design</p>
+      <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto grid max-w-7xl gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Meet our leadership
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Libero fames augue nisl porttitor nisi, quis. Id ac elit odio
+              vitae elementum enim vitae ullamcorper suspendisse.
+            </p>
           </div>
-          <p className="ml-5 w-3/5 ">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content.{" "}
-          </p>
-        </div>
-        <div className="flex items-center justify-center">
-          <div>
-            <h2 className="mb-2 mt-1">Mali Gaurav Bhausaheb</h2>
-            <p className="">Content Writer / Ui Design</p>
-          </div>
-          <p className="ml-5 w-3/5">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content.{" "}
-          </p>
-        </div>
-        <div className="flex items-center justify-center">
-          <div>
-            <h2 className="mb-2 mt-1">Patil Amol Ra</h2>
-            <p className="">Content Writer / Ui Design</p>
-          </div>
-          <p className="ml-5 w-3/5">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content.{" "}
-          </p>
+          <ul
+            role="list"
+            className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+          >
+            {people.map((person) => (
+              <li key={person.name}>
+                <div className="flex items-center gap-x-6">
+                  <img
+                    className="h-16 w-16 rounded-full"
+                    src={person.imageUrl}
+                    alt=""
+                  />
+                  <div>
+                    <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                      {person.name}
+                    </h3>
+                    <p className="text-sm font-semibold leading-6 text-indigo-600">
+                      {person.role}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </>
