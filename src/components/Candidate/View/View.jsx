@@ -59,24 +59,44 @@ function View() {
           </div>
           <span className="lg:md:xl:2xl:border-l-8 border-black ">
             <div className="ml-2 p-1 grid gap-1 ">
-              <div className="text-lg bg-blue-200 p-1">
+              <div
+                className="text-lg p-1"
+                style={{
+                  backgroundColor: "#00c4ed",
+                }}
+              >
                 Address:-{user.address}
               </div>
               <div className="text-lg  p-1">Email ID:-{user.email}</div>
-              <div className="text-lg bg-blue-200 p-1">
+              <div
+                className="text-lg p-1"
+                style={{
+                  backgroundColor: "#00c4ed",
+                }}
+              >
                 Phone Number:-{user.contact}
               </div>
               <div className="text-lg p-1 ">
                 Department:-
                 <span className="text-black">{user.department}</span>
               </div>
-              <div className="text-lg bg-blue-200 p-1">
+              <div
+                className="text-lg p-1"
+                style={{
+                  backgroundColor: "#00c4ed",
+                }}
+              >
                 Collage:-Shri Jaykumar Rawal Institute of Technology, Dondaicha
               </div>
             </div>
           </span>
         </div>
-        <div className="flex bg-blue-200 items-center justify-center w-full p-4 text-base text-justify ">
+        <div
+          className="flex  items-center justify-center w-full p-4 text-base text-justify "
+          style={{
+            backgroundColor: "#00c4ed",
+          }}
+        >
           <div className="xl:md:lg:2xl:w-2/3">
             Shri Jaykumar Rawal Institute of Technology was set up as a part of
             the self-powered plans of Dondaicha Dadasaheb knowledge city in 2011
@@ -90,7 +110,12 @@ function View() {
           </div>
         </div>
         <div className="grid  grid-cols-1 md:lg:xl:grid-cols-2 gap-5 place-content-center text-black">
-          <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
+          <div
+            className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 "
+            style={{
+              backgroundColor: "#00c4ed",
+            }}
+          >
             <h2 className="text-black">Semester V</h2>
             <div>
               <h4 className="text-black">Attandance</h4>
@@ -104,7 +129,12 @@ function View() {
               Download The Result
             </a>
           </div>
-          <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
+          <div
+            className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 "
+            style={{
+              backgroundColor: "#00c4ed",
+            }}
+          >
             <h2 className="text-black">Semester VI</h2>
             <div>
               <h4 className="text-black">Attandance</h4>
@@ -118,7 +148,12 @@ function View() {
               Download The Result
             </a>
           </div>
-          <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
+          <div
+            className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5"
+            style={{
+              backgroundColor: "#00c4ed",
+            }}
+          >
             <h2 className="text-black">Semester VII</h2>
             <div>
               <h4 className="text-black">Attandance</h4>
@@ -132,7 +167,12 @@ function View() {
               Download The Result
             </a>
           </div>
-          <div className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 bg-blue-200">
+          <div
+            className="h-12 w-full flex items-center justify-between rounded-md pt-2 pb-2 pl-4 pr-4 gap-5 "
+            style={{
+              backgroundColor: "#00c4ed",
+            }}
+          >
             <h2 className="text-black">Semester VIII</h2>
             <div>
               <h4 className="text-black">Attandance</h4>
