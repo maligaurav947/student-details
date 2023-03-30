@@ -26,7 +26,12 @@ function View() {
       <Header />
       <div className="flex mt-2 flex-col items-center justify-center gap-5 h-full">
         <div className="grid md:lg:xl:2xl:flex gap-2 items-center justify-center">
-          <div className="">
+          <div
+            className="p-2 rounded-lg"
+            style={{
+              backgroundColor: "#00c4ed",
+            }}
+          >
             <div className="w-full grid place-content-center text-center mr-2 ">
               <div className="w-full grid place-content-center">
                 {user.url ? (
@@ -38,9 +43,9 @@ function View() {
                   />
                 )}
               </div>
-              <div className="">
-                <h2 className="text-2xl">{user.name}</h2>
-                <p className="text-lg text-black">{user.department}</p>
+              <div className=" text-black">
+                <h2 className="text-2xl  text-black">{user.name}</h2>
+                <p className="text-lg  text-black">{user.department}</p>
               </div>
               <div className="mt-2">
                 <Link to={`/update/${id}`}>
