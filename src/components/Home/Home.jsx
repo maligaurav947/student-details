@@ -10,10 +10,9 @@ function Home() {
     <>
       <Header />
       <div
-        className="p-5 w-screen text-center grid place-content-center bg-no-repeat gap-5 home-container"
+        className="p-5 w-screen text-center grid place-content-center gap-5 home-container "
         style={{
           backgroundSize: "Cover",
-
           backgroundAttachment: "fixed",
         }}
       >

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import fireDb from "../../DB/Firebase";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Header from "../../Header/Header";
-import GraphData from "../GraphData";
 function View() {
   const [user, setUser] = useState({});
   const { id } = useParams();
