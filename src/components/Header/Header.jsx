@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { React, useState } from "react";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { MdGroup } from "react-icons/md";
-import { FcAbout } from "react-icons/fc";
+import { FcAbout, FcGoogle } from "react-icons/fc";
 import { ImBooks } from "react-icons/im";
 import { GoThreeBars } from "react-icons/go";
+import { signInWithGoogle } from "../DB/Firebase";
 function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
@@ -81,6 +82,12 @@ function Header() {
                     <Link to="/about" className="ml-2">
                       About Us
                     </Link>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug  hover:opacity-75">
+                    <FcGoogle />
+                    <div className="ml-2">Login</div>
                   </a>
                 </li>
               </ul>

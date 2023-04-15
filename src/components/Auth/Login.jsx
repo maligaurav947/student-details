@@ -2,165 +2,87 @@ import React from "react";
 
 function Login() {
   return (
-    <section className="relative bg-white overflow-hidden">
-      <img
-        className="absolute left-0 top-0"
-        src="flaro-assets/images/sign-in/gradient.svg"
-        alt=""
-      />
-      <div className="relative z-10 flex flex-wrap -m-8">
-        <div className="w-full md:w-1/2 p-8">
-          <div className="container px-4 mx-auto">
-            <div className="flex flex-wrap">
-              <div className="w-full">
-                <div className="md:max-w-lg mx-auto pt-16 md:pb-32">
-                  <a className="mb-28 inline-block" href="#">
-                    <img
-                      src="flaro-assets/logos/flaro-logo-black-xl.svg"
-                      alt=""
-                    />
-                  </a>
-                  <h2 className="mb-32 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight">
-                    Sign in and start saving time today.
-                  </h2>
-                  <h3 className="mb-9 text-xl font-bold font-heading leading-normal">
-                    Why should you join us?
-                  </h3>
-                  <ul className="md:max-w-xs">
-                    <li className="mb-5 flex flex-wrap">
-                      <svg
-                        className="mr-2"
-                        width="25"
-                        height="26"
-                        viewbox="0 0 25 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.0228 23 22.5 18.5228 22.5 13C22.5 7.47715 18.0228 3 12.5 3C6.97715 3 2.5 7.47715 2.5 13C2.5 18.5228 6.97715 23 12.5 23ZM17.1339 11.3839C17.622 10.8957 17.622 10.1043 17.1339 9.61612C16.6457 9.12796 15.8543 9.12796 15.3661 9.61612L11.25 13.7322L9.63388 12.1161C9.14573 11.628 8.35427 11.628 7.86612 12.1161C7.37796 12.6043 7.37796 13.3957 7.86612 13.8839L10.3661 16.3839C10.8543 16.872 11.6457 16.872 12.1339 16.3839L17.1339 11.3839Z"
-                          fill="#4F46E5"
-                        ></path>
-                      </svg>
-                      <span className="flex-1 font-medium leading-relaxed">
-                        The best you can do in no time at all, amazing feature
-                        goes here
-                      </span>
-                    </li>
-                    <li className="mb-5 flex flex-wrap">
-                      <svg
-                        className="mr-2"
-                        width="25"
-                        height="26"
-                        viewbox="0 0 25 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M12.5 23C18.0228 23 22.5 18.5228 22.5 13C22.5 7.47715 18.0228 3 12.5 3C6.97715 3 2.5 7.47715 2.5 13C2.5 18.5228 6.97715 23 12.5 23ZM17.1339 11.3839C17.622 10.8957 17.622 10.1043 17.1339 9.61612C16.6457 9.12796 15.8543 9.12796 15.3661 9.61612L11.25 13.7322L9.63388 12.1161C9.14573 11.628 8.35427 11.628 7.86612 12.1161C7.37796 12.6043 7.37796 13.3957 7.86612 13.8839L10.3661 16.3839C10.8543 16.872 11.6457 16.872 12.1339 16.3839L17.1339 11.3839Z"
-                          fill="#4F46E5"
-                        ></path>
-                      </svg>
-                      <span className="flex-1 font-medium leading-relaxed">
-                        24/7 Support of our dedicated, highly professional team
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 p-8">
-          <div className="p-4 py-16 flex flex-col justify-center bg-blueGray-100 h-full">
-            <form className="md:max-w-lg mx-auto">
-              <label className="block mb-4">
-                <p className="mb-2 text-gray-900 font-semibold leading-normal">
-                  Email Address *
-                </p>
-                <input
-                  className="px-4 py-3.5 w-full text-gray-400 font-medium placeholder-gray-400 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
-                  id="signInInput1-1"
-                  type="text"
-                  placeholder="Enter email address"
-                />
-              </label>
-              <label className="block mb-5">
-                <p className="mb-2 text-gray-900 font-semibold leading-normal">
-                  Password *
-                </p>
-                <input
-                  className="px-4 py-3.5 w-full text-gray-400 font-medium placeholder-gray-400 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
-                  id="signInInput1-2"
-                  type="password"
-                  placeholder="********"
-                />
-              </label>
-              <div className="flex flex-wrap justify-between -m-2 mb-4">
-                <div className="w-auto p-2">
-                  <div className="flex items-center">
-                    <input
-                      className="w-4 h-4"
-                      id="default-checkbox"
-                      type="checkbox"
-                      value=""
-                    />
-                    <label
-                      className="ml-2 text-sm text-gray-900 font-medium"
-                      for="default-checkbox"
-                    >
-                      Remember Me
-                    </label>
-                  </div>
-                </div>
-                <div className="w-auto p-2">
-                  <a
-                    className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
-                    href="#"
-                  >
-                    Forgot Password?
-                  </a>
-                </div>
-              </div>
-              <button
-                className="mb-9 py-4 px-9 w-full text-white font-semibold border border-indigo-700 rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
-                type="button"
+    <section class="bg-gray-50 min-h-screen flex items-center justify-center">
+      <div class="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5 items-center">
+        <div class="">
+          <h2 class="font-bold text-2xl text-[#002D74]">Login</h2>
+          <p class="text-xs mt-4 text-[#002D74]">
+            If you are already a member, easily log in
+          </p>
+
+          <form action="" class="flex flex-col gap-4">
+            <input
+              class="p-2 mt-8 rounded-xl border"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <div class="relative">
+              <input
+                class="p-2 rounded-xl border w-full"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="gray"
+                class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2"
+                viewBox="0 0 16 16"
               >
-                Sign In
-              </button>
-              <p className="mb-5 text-sm text-gray-500 font-medium text-center">
-                Or continue with
-              </p>
-              <div className="flex flex-wrap justify-center -m-2">
-                <div className="w-auto p-2">
-                  <button className="flex items-center p-4 bg-white hover:bg-gray-50 border rounded-lg transition ease-in-out duration-200">
-                    <img
-                      className="mr-3"
-                      src="flaro-assets/logos/brands/google.svg"
-                      alt=""
-                    />
-                    <span className="font-semibold leading-normal">
-                      Sign in with Google
-                    </span>
-                  </button>
-                </div>
-                <div className="w-auto p-2">
-                  <button className="flex items-center p-4 bg-white hover:bg-gray-50 border rounded-lg transition ease-in-out duration-200">
-                    <img
-                      className="mr-3"
-                      src="flaro-assets/logos/brands/fb.svg"
-                      alt=""
-                    />
-                    <span className="font-semibold leading-normal">
-                      Sign in with Facebook
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </form>
+                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+              </svg>
+            </div>
+            <button class="bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">
+              Login
+            </button>
+          </form>
+
+          <div class="mt-6 grid grid-cols-3 items-center text-gray-400">
+            <hr class="border-gray-400" />
+            <p class="text-center text-sm">OR</p>
+            <hr class="border-gray-400" />
+          </div>
+
+          <button class="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]">
+            <svg
+              class="mr-3"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              width="25px"
+            >
+              <path
+                fill="#FFC107"
+                d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+              />
+              <path
+                fill="#FF3D00"
+                d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+              />
+              <path
+                fill="#4CAF50"
+                d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+              />
+              <path
+                fill="#1976D2"
+                d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+              />
+            </svg>
+            Login with Google
+          </button>
+
+          <div class="mt-5 text-xs border-b border-[#002D74] py-4 text-[#002D74]">
+            <a href="#">Forgot your password?</a>
+          </div>
+
+          <div class="mt-3 text-xs flex justify-between items-center text-[#002D74]">
+            <p>Don't have an account?</p>
+            <button class="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300">
+              Register
+            </button>
           </div>
         </div>
       </div>
