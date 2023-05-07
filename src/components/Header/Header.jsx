@@ -87,7 +87,7 @@ function Header() {
                 <li className="nav-item">
                   <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug  hover:opacity-75">
                     <FcGoogle />
-                    <div className="ml-2">Login</div>
+                    <div className="ml-2">Login / Signup</div>
                   </a>
                 </li>
               </ul>
