@@ -91,12 +91,15 @@ function View() {
           </span>
         </div>
         <div
-          className="flex  items-center justify-center w-full p-4 text-base text-justify "
+          className="grid w-full p-4 text-base text-justify "
           style={{
             backgroundColor: "#00c4ed",
           }}
         >
-          <div className="xl:md:lg:2xl:w-2/3">
+          <div className="text-2xl font-bold capitalize mb-0.5">
+            personal improvement -
+          </div>
+          <div className="xl:md:lg:2xl">
             Shri Jaykumar Rawal Institute of Technology was set up as a part of
             the self-powered plans of Dondaicha Dadasaheb knowledge city in 2011
             with the objective to erect a truly world class institute in the
