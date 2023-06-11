@@ -4,13 +4,13 @@ import Contact from "../Contact/Contact";
 import Header from "../Header/Header";
 import Feature from "./Feature";
 import Testimonials from "./Testimonials";
-
+import "./home.css";
 function Home() {
   return (
     <>
       <Header />
       <div
-        className="p-5 w-screen text-center grid place-content-center gap-5 home-container "
+        className="hero-background p-5 w-screen text-center grid place-content-center gap-5 home-container"
         style={{
           backgroundSize: "Cover",
           backgroundAttachment: "fixed",
@@ -19,7 +19,7 @@ function Home() {
         <h2 className="text-3xl lg:xl:md:2xl:text-6xl font-medium mb-3">
           Welcome to the Student Details System
         </h2>
-        <p className="text-lg lg:xl:md:2xl:text-2xl font-normal text-black">
+        <p className="text-lg lg:xl:md:2xl:text-2xl font-normal text-white">
           This website allows you to manage student details, courses, and
           grades.
           <br />
