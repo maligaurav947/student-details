@@ -1,5 +1,4 @@
 import React from "react";
-
 import Contact from "../Contact/Contact";
 import Header from "../Header/Header";
 import Feature from "./Feature";
@@ -10,9 +9,11 @@ function Home() {
     <>
       <Header />
       <div
-        className="hero-background p-5 w-screen text-center grid place-content-center gap-5 home-container"
+        className="hero-background p-5 w-screen text-center grid place-content-center gap-5 home-container bg-zinc-500 bg-[url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1232&q=80')]"
         style={{
           backgroundSize: "Cover",
+          backgroundBlendMode: "multiply",
+
           backgroundAttachment: "fixed",
         }}
       >
