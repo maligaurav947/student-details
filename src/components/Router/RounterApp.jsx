@@ -25,15 +25,16 @@ import ElecSecoundYear from "./../Syllabus/Electronics/ElecSecoundYear";
 import ElecThirdYear from "./../Syllabus/Electronics/ElecThirdYear";
 import ElecForthYear from "./../Syllabus/Electronics/ElecForthYear";
 import View from "./../Candidate/View/View";
-import About from "./../About/About";
 import Error from "./../asst/Error";
-import Addmission from "../Pages/Addmission";
+
 function RounterApp() {
   return (
     <Routes>
       <Route index element={<Home />} />
       <Route path="/candidates" element={<Candidates />} />
       <Route path="/add" element={<AddCandidate />} />
+      <Route path="/update/:id" element={<AddCandidate />} />
+      <Route path="/view/:id" element={<View />} />
       <Route path="/syllabus" element={<Syllabus />} />
       <Route path="/civil" element={<Civil />} />
       <Route path="/civil/first" element={<CivilFirstYear />} />
@@ -55,10 +56,7 @@ function RounterApp() {
       <Route path="/electronics/secound" element={<ElecSecoundYear />} />
       <Route path="/electronics/third" element={<ElecThirdYear />} />
       <Route path="/electronics/forth" element={<ElecForthYear />} />
-      <Route path="/update/:id" element={<AddCandidate />} />
-      <Route path="/view/:id" element={<View />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/addmission" element={<Addmission />} />
+
       <Route path="*" element={<Error />} />
     </Routes>
   );

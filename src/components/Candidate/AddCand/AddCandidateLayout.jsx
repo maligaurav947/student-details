@@ -17,6 +17,10 @@ function AddCandidateLayout({
   semsixmark,
   semsevenmark,
   semeightmark,
+  semfivelink,
+  semsixlink,
+  semsevenlink,
+  semeightlink,
   id,
 }) {
   return (
@@ -289,6 +293,82 @@ function AddCandidateLayout({
             name="semeightmark"
             id="semeightmark"
             value={semeightmark || ""}
+            onChange={handleInputChange}
+            required
+          />
+          <label
+            htmlFor="name"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Semester VIII
+          </label>
+        </div>
+      </div>
+
+      <label className="text-black font-bold">Provide Semster Link</label>
+      <div class="grid md:grid-cols-4 md:gap-6 mt-2 grid-cols-2 gap-1">
+        <div class="relative z-0 w-full mb-6 group ">
+          <input
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-b-2 border-black appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer "
+            placeholder=" "
+            type="url"
+            name="semfivelink"
+            id="semfivelink"
+            value={semfivelink || ""}
+            onChange={handleInputChange}
+            required
+          />
+          <label
+            htmlFor="name"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Semester V
+          </label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-b-2 border-black appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer "
+            placeholder=" "
+            type="url"
+            name="semsixlink"
+            id="semsixlink"
+            value={semsixlink || ""}
+            onChange={handleInputChange}
+            required
+          />
+          <label
+            htmlFor="name"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Semester VI
+          </label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-b-2 border-black appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer "
+            placeholder=" "
+            type="url"
+            name="semsevenlink"
+            id="semsevenlink"
+            value={semsevenlink || ""}
+            onChange={handleInputChange}
+            required
+          />
+          <label
+            htmlFor="name"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Semester VII
+          </label>
+        </div>
+        <div class="relative z-0 w-full mb-6 group">
+          <input
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  border-b-2 border-black appearance-nonedark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer "
+            placeholder=" "
+            type="url"
+            name="semeightlink"
+            id="semeightlink"
+            value={semeightlink || ""}
             onChange={handleInputChange}
             required
           />

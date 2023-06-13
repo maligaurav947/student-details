@@ -20,6 +20,10 @@ const initialState = {
   semsixmark: "",
   semsevenmark: "",
   semeightmark: "",
+  semfivelink: "",
+  semsixlink: "",
+  semsevenlink: "",
+  semeightlink: "",
 };
 export default function AddCandidate() {
   const [data, setData] = useState([]);
@@ -65,6 +69,10 @@ export default function AddCandidate() {
     semsixmark,
     semsevenmark,
     semeightmark,
+    semfivelink,
+    semsixlink,
+    semsevenlink,
+    semeightlink,
   } = state;
   function handleSubmit(e) {
     e.preventDefault();
@@ -81,7 +89,11 @@ export default function AddCandidate() {
       !semfivemark ||
       !semsixmark ||
       !semsevenmark ||
-      !semeightmark
+      !semeightmark ||
+      !semfivelink ||
+      !semsixlink ||
+      !semsevenlink ||
+      !semeightlink
     ) {
       toast.error("Please Provide Following Information");
     } else {
@@ -135,6 +147,10 @@ export default function AddCandidate() {
           semsixmark={semsixmark}
           semsevenmark={semsevenmark}
           semeightmark={semeightmark}
+          semfivelink={semfivelink}
+          semsixlink={semsixlink}
+          semsevenlink={semsevenlink}
+          semeightlink={semeightlink}
         />
       </form>
     </div>

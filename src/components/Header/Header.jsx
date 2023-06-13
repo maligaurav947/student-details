@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { React, useState } from "react";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { MdGroup } from "react-icons/md";
-import { FcAbout, FcGoogle } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
 import { ImBooks } from "react-icons/im";
 import { GoThreeBars } from "react-icons/go";
+import { AiOutlineLogin } from "react-icons/ai";
 import { signInWithGoogle } from "../DB/Firebase";
 function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -47,7 +48,7 @@ function Header() {
               x
             >
               <ul
-                className="flex flex-col lg:flex-row list-none lg:ml-auto text-sm  "
+                className="flex flex-col items-center lg:flex-row list-none lg:ml-auto text-sm  "
                 style={{
                   color: "#E8D5B5",
                 }}
@@ -72,22 +73,21 @@ function Header() {
                   <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug hover:opacity-75">
                     <ImBooks />
                     <Link to="/syllabus" className="ml-2">
-                      Syllabus
+                      University
                     </Link>
                   </a>
                 </li>
-                <li className="nav-item">
+
+                <li
+                  className="nav-item"
+                  // onClick={() => {
+                  //   signInWithGoogle();
+                  // }}
+                >
                   <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug  hover:opacity-75">
-                    <FcAbout />
-                    <Link to="/about" className="ml-2">
-                      About Us
+                    <Link to="/" className="hover:rotate-45 ">
+                      <AiOutlineLogin size={30} />
                     </Link>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="px-3 py-2 flex items-center  uppercase font-bold leading-snug  hover:opacity-75">
-                    <FcGoogle />
-                    <div className="ml-2">Login / Signup</div>
                   </a>
                 </li>
               </ul>

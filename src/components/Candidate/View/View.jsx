@@ -127,7 +127,7 @@ function View() {
               <h4 className="text-black">Percentage</h4>
               <h2 className="text-black">{user.semfivemark}/100</h2>
             </div>
-            <a href="" className="text-blue-600">
+            <a href={user.semfivelink} className="text-blue-600">
               Download The Result
             </a>
           </div>
@@ -146,7 +146,7 @@ function View() {
               <h4 className="text-black">Percentage</h4>
               <h2 className="text-black">{user.semsixmark}/100</h2>
             </div>
-            <a href="" className="text-blue-600">
+            <a href={user.semsixlink} className="text-blue-600">
               Download The Result
             </a>
           </div>
@@ -165,7 +165,7 @@ function View() {
               <h4 className="text-black">Percentage</h4>
               <h2 className="text-black">{user.semsevenmark}/100</h2>
             </div>
-            <a href="" className="text-blue-600">
+            <a href={user.semsevenlink} className="text-blue-600">
               Download The Result
             </a>
           </div>
@@ -184,7 +184,7 @@ function View() {
               <h4 className="text-black">Percentage</h4>
               <h2 className="text-black">{user.semeightmark}/100</h2>
             </div>
-            <a href="" className="text-blue-600">
+            <a href={user.semeightlink} className="text-blue-600">
               Download The Result
             </a>
           </div>

@@ -3,6 +3,7 @@ import Contact from "../Contact/Contact";
 import Header from "../Header/Header";
 import Feature from "./Feature";
 import Testimonials from "./Testimonials";
+import About from "./../About/About";
 
 function Home() {
   return (
@@ -13,7 +14,6 @@ function Home() {
         style={{
           backgroundSize: "Cover",
           backgroundBlendMode: "multiply",
-
           backgroundAttachment: "fixed",
         }}
       >
@@ -60,6 +60,7 @@ function Home() {
         </div>
       </div>
       <Contact />
+      <About />
     </>
   );
 }
