@@ -80,12 +80,26 @@ function View() {
                 <span className="text-black">{user.department}</span>
               </div>
               <div
+                className="flex text-lg p-1"
+                style={{
+                  backgroundColor: "#00c4ed",
+                }}
+              >
+                <div>Collage:-</div>
+                Shri Jaykumar Rawal Institute of Technology
+              </div>
+              <div className="text-lg p-1">
+                Parent Name:-
+                <span>{user.parentname}</span>
+              </div>
+              <div
                 className="text-lg p-1"
                 style={{
                   backgroundColor: "#00c4ed",
                 }}
               >
-                Collage:-Shri Jaykumar Rawal Institute of Technology, Dondaicha
+                Parent Contact:-
+                <span>{user.parentno}</span>
               </div>
             </div>
           </span>

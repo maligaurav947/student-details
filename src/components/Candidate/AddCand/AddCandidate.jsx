@@ -24,6 +24,8 @@ const initialState = {
   semsixlink: "",
   semsevenlink: "",
   semeightlink: "",
+  parentname: "",
+  parentno: "",
 };
 export default function AddCandidate() {
   const [data, setData] = useState([]);
@@ -73,6 +75,8 @@ export default function AddCandidate() {
     semsixlink,
     semsevenlink,
     semeightlink,
+    parentno,
+    parentname,
   } = state;
   function handleSubmit(e) {
     e.preventDefault();
@@ -93,7 +97,9 @@ export default function AddCandidate() {
       !semfivelink ||
       !semsixlink ||
       !semsevenlink ||
-      !semeightlink
+      !semeightlink ||
+      !parentname ||
+      !parentno
     ) {
       toast.error("Please Provide Following Information");
     } else {
@@ -151,6 +157,8 @@ export default function AddCandidate() {
           semsixlink={semsixlink}
           semsevenlink={semsevenlink}
           semeightlink={semeightlink}
+          parentname={parentname}
+          parentno={parentno}
         />
       </form>
     </div>
